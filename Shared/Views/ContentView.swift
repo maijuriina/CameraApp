@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var showImagePicker:Bool = false
     @State var showActionSheet:Bool = false
     @State var image: Image?
+    @State var sourceType:Int = 0
     
     var body: some View {
         ZStack {
@@ -31,15 +32,17 @@ struct ContentView: View {
             }.offset(y: -70)
             .actionSheet(isPresented: $showActionSheet, content: { () -> ActionSheet in ActionSheet(title: Text("Select Image"), message: Text("Please select an image from the image gallery or use the camera"), buttons: [
                 ActionSheet.Button.default(Text("Camera"), action: {
-        
+                    self.sourceType = 0
+                    self.showImagePicker.toggle()
                 }), ActionSheet.Button.default(Text("Photo Gallery"), action: {
+                    self.sourceType = 1
                     self.showImagePicker.toggle()
                 }),
                 ActionSheet.Button.cancel()
             ])
         })
         if showImagePicker {
-            ImagePickerView(isVisible: $showImagePicker, image: $image)
+            ImagePickerView(isVisible: $showImagePicker, image: $image, sourceType: sourceType)
         }
     }
         .onAppear { self.image = Image("cat_photo") }

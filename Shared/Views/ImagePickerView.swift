@@ -10,6 +10,7 @@ import SwiftUI
 struct ImagePickerView: UIViewControllerRepresentable {
     @Binding var isVisible:Bool
     @Binding var image:Image?
+    var sourceType:Int
     
     func makeCoordinator() -> Coordinator {
         Coordinator(isVisible: $isVisible, image: $image)
@@ -18,7 +19,7 @@ struct ImagePickerView: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let vc = UIImagePickerController()
         vc.allowsEditing = true
-        vc.sourceType = .photoLibrary
+        vc.sourceType = sourceType == 1 ? .photoLibrary : .camera
         
         vc.delegate = context.coordinator
         

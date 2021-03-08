@@ -15,6 +15,8 @@
 		796A85B125F5FB96009F6F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A858625F5FB95009F6F23 /* ContentView.swift */; };
 		796A85B225F5FB96009F6F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796A858725F5FB95009F6F23 /* Assets.xcassets */; };
 		796A85B325F5FB96009F6F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796A858725F5FB95009F6F23 /* Assets.xcassets */; };
+		796A85CC25F5FC8F009F6F23 /* CameraButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A85CB25F5FC8F009F6F23 /* CameraButtonView.swift */; };
+		796A85CD25F5FC8F009F6F23 /* CameraButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796A85CB25F5FC8F009F6F23 /* CameraButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		796A85A725F5FB96009F6F23 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		796A85AB25F5FB96009F6F23 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		796A85AD25F5FB96009F6F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796A85CB25F5FC8F009F6F23 /* CameraButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +101,8 @@
 		796A858425F5FB95009F6F23 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				796A85C625F5FC55009F6F23 /* Views */,
 				796A858525F5FB95009F6F23 /* CameraAppApp.swift */,
-				796A858625F5FB95009F6F23 /* ContentView.swift */,
 				796A858725F5FB95009F6F23 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -149,6 +152,15 @@
 				796A85AD25F5FB96009F6F23 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		796A85C625F5FC55009F6F23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				796A858625F5FB95009F6F23 /* ContentView.swift */,
+				796A85CB25F5FC8F009F6F23 /* CameraButtonView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796A85CC25F5FC8F009F6F23 /* CameraButtonView.swift in Sources */,
 				796A85B025F5FB96009F6F23 /* ContentView.swift in Sources */,
 				796A85AE25F5FB96009F6F23 /* CameraAppApp.swift in Sources */,
 			);
@@ -317,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				796A85CD25F5FC8F009F6F23 /* CameraButtonView.swift in Sources */,
 				796A85B125F5FB96009F6F23 /* ContentView.swift in Sources */,
 				796A85AF25F5FB96009F6F23 /* CameraAppApp.swift in Sources */,
 			);
